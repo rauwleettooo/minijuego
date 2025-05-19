@@ -29,7 +29,7 @@ def mostrar_pregunta(nombre):
 
     def responder(eleccion):
         if eleccion == respuesta_correcta:
-            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 10 WHERE nombre = ?", (nombre,))
+            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 100 WHERE nombre = ?", (nombre,))
             conexion.commit()
         ventana_pregunta1.destroy()
         mostrar_pregunta2(nombre)
@@ -59,7 +59,7 @@ def mostrar_pregunta2(nombre):
 
     def responder(eleccion):
         if eleccion == respuesta_correcta:
-            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 10 WHERE nombre = ?", (nombre,))
+            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 100 WHERE nombre = ?", (nombre,))
             conexion.commit()
         ventana_pregunta2.destroy()
         mostrar_pregunta3(nombre)
@@ -91,7 +91,7 @@ def mostrar_pregunta3(nombre):
         if eleccion == respuesta_correcta:
             label_aviso = tk.Label(ventana_pregunta3, text="Correcto", font=('consolas', 10))
             label_aviso.pack(pady=10)
-            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 10 WHERE nombre = ?", (nombre,))
+            cursor.execute("UPDATE jugadores SET puntuacion = puntuacion + 100 WHERE nombre = ?", (nombre,))
             conexion.commit()
         ventana_pregunta3.destroy()
         mostrar_resultado(nombre)
