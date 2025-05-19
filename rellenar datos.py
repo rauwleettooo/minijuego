@@ -167,3 +167,5 @@ label_aviso = tk.Label(root, text="", font=('consolas', 10))
 label_aviso.pack(pady=10)
 
 root.mainloop()
+
+#VAYA GITANOOOOOOOOOO
